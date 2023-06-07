@@ -1,0 +1,30 @@
+<!--
+<button (click)="GetUsers()">getUsers</button>
+ <div *ngIf="lUser">
+   user list:
+    <ul>
+      <li *ngFor="let user of sliceUsers; let i = index">{{i+1}}{{user.name}}</li>
+     
+    </ul>
+  </div>
+<span>users</span> -->
+
+<section class="container">
+    <div class="element" *ngFor="let user of sliceUsers"
+    [ngStyle]="{'background-color': selectedUser.id===user.id ? 'darkorange' :null}"> {{ user.name }}</div> 
+</section>
+
+<section>
+    id: {{ selectedUser.id }}<br />
+    name: {{ selectedUser.name }}<br />
+    email: {{ selectedUser.email }}<br />
+</section>
+<br/>
+<!--
+<img class="img-responsive" src="assets/images/Screenshot 2022-07-17 120209.png" >
+<img src="Screenshot 2022-07-17 120209.png" alt="Trulli" width="500" height="333"> 
+-->
+<button (click)="btnArrowRight()">rigth arrow</button><br/><br/>
+<button (click)="btnArrowLeft()">Left arrow</button><br/><br/>
+<button (click)="btnArrowUp()">up arrow</button> <br/><br/>
+<button (click)="btnArrowDown()">Down arrow</button> <br/><br/>
